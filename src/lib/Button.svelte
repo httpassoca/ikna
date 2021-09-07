@@ -1,7 +1,17 @@
 <script lang="ts">
+  export let link = "";
+  export let goBack = false;
+  const click = (e) => {
+    e.preventDefault;
+    if (link) {
+      window.location.href = link;
+    } else if (goBack) {
+      window.history.back();
+    }
+  };
 </script>
 
-<button> <slot /> </button>
+<button on:click={click}> <slot /> </button>
 
 <style lang="sass">
 button
@@ -12,4 +22,5 @@ button
   border: none
   border-radius: 4px
   font-size: 1.125rem
+  box-shadow: 0 0 8px 0px #ff3e00
 </style>
