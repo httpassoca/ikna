@@ -1,15 +1,19 @@
 <script lang="ts">
-  import logo from "./assets/svelte.png";
   import Counter from "./lib/Counter.svelte";
   import Card from "./lib/Card.svelte";
+  import Button from "./lib/Button.svelte";
 </script>
+
+<svelte:head>
+  <title>Ikna</title>
+</svelte:head>
 
 <main>
   <div class="flex">
-    <img src={logo} alt="Svelte Logo" />
     <h1>Svelte Ikna!</h1>
   </div>
   <Card />
+  <Button>asda</Button>
 </main>
 
 <style>
