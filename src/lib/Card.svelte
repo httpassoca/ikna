@@ -11,13 +11,16 @@
   .card {
     color: inherit;
     cursor: pointer;
-    width: calc(33% - 2rem);
-    min-width: calc(33% - 2rem);
+    width: 350px;
+    min-width: 350px;
     height: 350px;
     min-height: 350px;
     perspective: 1000px;
     margin: 1rem;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .front,
@@ -32,8 +35,8 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    height: 250px;
-    width: 250px;
+    height: 100%;
+    width: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transform-style: preserve-3d;
@@ -63,7 +66,7 @@
   }
 
   .back {
-    background: pink;
+    background: #000000aa;
     transform: rotateY(-180deg);
 
     .card.show & {
