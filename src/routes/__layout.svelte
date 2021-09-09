@@ -49,7 +49,7 @@ header, footer
   align-items: center
   height: 60px
   padding: 10px 20px
-  > span
+header > span
     font-size: 1.5rem
     color: #ff3e00
     font-weight: bolder   
