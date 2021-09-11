@@ -7,3 +7,4 @@
 </svelte:head>
 
 <Button link="/cards">Go to cards</Button>
+<Button link="/decks">Go to decks</Button>

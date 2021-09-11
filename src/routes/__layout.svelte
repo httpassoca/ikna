@@ -3,9 +3,9 @@
 </script>
 
 <header>
-  <span>IKNA</span>
+  <a href="/">IKNA</a>
   <nav>
-    <Button>Login</Button>
+    <Button link="/auth">Auth</Button>
   </nav>
 </header>
 <main>
@@ -49,10 +49,12 @@ header, footer
   align-items: center
   height: 60px
   padding: 10px 20px
-header > span
-    font-size: 1.5rem
-    color: #ff3e00
-    font-weight: bolder   
+header > a
+  font-size: 1.5rem
+  color: #ff3e00
+  font-weight: bolder
+  text-decoration: none
+  cursor: pointer
 .passoca
   text-decoration: none
   display: flex
