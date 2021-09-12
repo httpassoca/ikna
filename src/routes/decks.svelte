@@ -1,13 +1,7 @@
 <script lang="ts">
   import Button from "$lib/base/Button.svelte";
   import List from "$lib/base/DeckList.svelte";
-
-  let decks = [
-    { name: "deck 1", id: 1 },
-    { name: "deck 2", id: 2 },
-    { name: "deck 3", id: 3 },
-    { name: "deck 4", id: 4 },
-  ];
+  import { decks } from "../stores/decks";
 
   const removeItem = ({ detail }) => {
     console.log(`removing item ${detail}`);
@@ -23,7 +17,7 @@
 </svelte:head>
 
 <List
-  items={decks}
+  items={$decks}
   on:click={(e) => clickItem(e)}
   on:remove={(e) => removeItem(e)}
 />
