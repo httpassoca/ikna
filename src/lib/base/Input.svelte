@@ -1,7 +1,11 @@
-<input {...$$restProps} />
+<script>
+  let input;
+</script>
+
+<input {...$$restProps} bind:this={input} />
 
 <style lang="sass">
-input
+:global(input)
   color: black
   padding: 5px 10px
   margin: 5px 

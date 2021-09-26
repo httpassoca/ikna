@@ -1,6 +1,6 @@
 <script lang="ts">
+  import DeckSearch from "$lib/DeckSearch.svelte";
   import Button from "$lib/base/Button.svelte";
-  import Input from "$lib/base/Input.svelte";
   import List from "$lib/base/DeckList.svelte";
   import { decks } from "../stores/decks";
 
@@ -18,7 +18,8 @@
   <title>Ikna | Decks</title>
 </svelte:head>
 
-<Input name="search" type="text" placeholder="Search deck" value={search} />
+<DeckSearch value={search} />
+
 <List
   items={$decks}
   on:click={(e) => clickItem(e)}
