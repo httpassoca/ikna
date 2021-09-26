@@ -1,7 +1,3 @@
-<script>
-  import Button from "$lib/base/Button.svelte";
-</script>
-
 <header>
   <a href="/">IKNA</a>
   <nav>
@@ -74,8 +70,10 @@ header > a
     span 
       opacity: 1  
 main
-  margin: 0 auto
-  min-height: calc(100vh - 120px)
+  max-width: 1200px
+  margin: 20px auto
+  height: calc(100vh - 120px)
+  overflow-y: auto
   display: flex
   flex-direction: column
   padding: 20px
@@ -92,10 +90,14 @@ nav
 :global(input)
   color: black
   padding: 5px 10px
-  margin: 5px 
   background-color: #eee
+  margin: 10px 0
   border: none
   border-radius: 4px
   font-size: 1.125rem
   box-shadow: 0 0 8px 0px rgba(0,0,0, .5)
+:global(.info)
+  font-style: italic
+  color: #ccc
+  user-select: none
 </style>

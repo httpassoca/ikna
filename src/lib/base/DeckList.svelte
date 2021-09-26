@@ -41,6 +41,7 @@ li
   font-size: 1rem
   justify-content: space-between
   min-width: 300px
+  cursor: pointer
   .buttons
     margin-left: 20px
     display: flex

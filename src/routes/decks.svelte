@@ -1,10 +1,12 @@
 <script lang="ts">
   import DeckSearch from "$lib/DeckSearch.svelte";
-  import List from "$lib/base/DeckList.svelte";
+  import DeckList from "$lib/base/DeckList.svelte";
+  import PageTitle from "$lib/base/PageTitle.svelte";
   import { decks } from "../stores/decks";
 
   let search = "";
   let filteredDecks;
+  let tipMessage = "Select a deck to train...";
   $: {
     if (search) {
       filteredDecks = $decks.filter((deck) =>
@@ -13,6 +15,8 @@
     } else {
       filteredDecks = [...$decks];
     }
+    if (filteredDecks.length === 0) tipMessage = "No decks matched!";
+    else tipMessage = "Select a deck to train...";
   }
   const removeItem = ({ detail }) => {
     console.log(`removing item ${detail}`);
@@ -24,12 +28,15 @@
 </script>
 
 <svelte:head>
-  <title>Ikna | Decks</title>
+  <title>Decks | Ikna</title>
 </svelte:head>
 
-<DeckSearch bind:value={search} />
+<PageTitle>Decks</PageTitle>
 
-<List
+<DeckSearch bind:value={search} />
+<p class="info">{tipMessage}</p>
+
+<DeckList
   items={filteredDecks}
   on:click={(e) => clickItem(e)}
   on:remove={(e) => removeItem(e)}
