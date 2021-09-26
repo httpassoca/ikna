@@ -1,10 +1,19 @@
 <script lang="ts">
   import DeckSearch from "$lib/DeckSearch.svelte";
-  import Button from "$lib/base/Button.svelte";
   import List from "$lib/base/DeckList.svelte";
   import { decks } from "../stores/decks";
 
   let search = "";
+  let filteredDecks;
+  $: {
+    if (search) {
+      filteredDecks = $decks.filter((deck) =>
+        deck.name.toUpperCase().includes(search.toUpperCase())
+      );
+    } else {
+      filteredDecks = [...$decks];
+    }
+  }
   const removeItem = ({ detail }) => {
     console.log(`removing item ${detail}`);
   };
@@ -18,11 +27,10 @@
   <title>Ikna | Decks</title>
 </svelte:head>
 
-<DeckSearch value={search} />
+<DeckSearch bind:value={search} />
 
 <List
-  items={$decks}
+  items={filteredDecks}
   on:click={(e) => clickItem(e)}
   on:remove={(e) => removeItem(e)}
 />
-<Button link="/cards">Go to cards</Button>

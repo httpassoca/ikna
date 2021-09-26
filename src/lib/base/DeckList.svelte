@@ -35,11 +35,10 @@ li
   display: flex
   padding: 10px
   margin: 5px 0px 
-  background-color: #ff3e00
+  background-color: #ff5c27
   border: none
   border-radius: 2px
   font-size: 1rem
-  box-shadow: 0 0 8px 0px #ff3e00
   justify-content: space-between
   min-width: 300px
   .buttons

@@ -22,5 +22,4 @@ button
   border: none
   border-radius: 4px
   font-size: 1.125rem
-  box-shadow: 0 0 8px 0px #ff3e00
 </style>

@@ -5,7 +5,11 @@
 <header>
   <a href="/">IKNA</a>
   <nav>
-    <Button link="/auth">Auth</Button>
+    <ul>
+      <li><a href="/auth">Auth</a></li>
+      <li><a href="/decks">Decks</a></li>
+      <li><a href="/cards">Cards</a></li>
+    </ul>
   </nav>
 </header>
 <main>
@@ -73,7 +77,25 @@ main
   margin: 0 auto
   min-height: calc(100vh - 120px)
   display: flex
-  align-items: center
-  justify-content: center
   flex-direction: column
+  padding: 20px
+nav
+  ul
+    display: flex
+    list-style-type: none
+    gap: 10px
+    font-weight: 600
+    font-size: 1.125rem
+    a
+      text-decoration: none
+
+:global(input)
+  color: black
+  padding: 5px 10px
+  margin: 5px 
+  background-color: #eee
+  border: none
+  border-radius: 4px
+  font-size: 1.125rem
+  box-shadow: 0 0 8px 0px rgba(0,0,0, .5)
 </style>
