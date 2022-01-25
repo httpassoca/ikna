@@ -1,3 +1,7 @@
+<script lang="ts">
+  import "../sass/global.sass";
+</script>
+
 <header>
   <a href="/">IKNA</a>
   <nav>
@@ -13,7 +17,7 @@
 </main>
 <footer>
   <i>Developed to not use Anki.</i>
-  <a href="https://passoca.com.br" class="passoca">
+  <a href="https://passoca.dev" class="passoca">
     <span> Passoca </span>
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -33,15 +37,6 @@
 </footer>
 
 <style lang="sass">
-:global(*)
-  padding: 0
-  margin: 0
-  outline: 0
-  box-sizing: border-box
-  color: #eee
-  font-family: 'IBM Plex Sans', 'Merriweather Sans', sans-serif
-:global(html)
-  background-color: #333
 header, footer
   background-color: #191919
   display: flex
@@ -86,18 +81,4 @@ nav
     font-size: 1.125rem
     a
       text-decoration: none
-
-:global(input)
-  color: black
-  padding: 5px 10px
-  background-color: #eee
-  margin: 10px 0
-  border: none
-  border-radius: 4px
-  font-size: 1.125rem
-  box-shadow: 0 0 8px 0px rgba(0,0,0, .5)
-:global(.info)
-  font-style: italic
-  color: #ccc
-  user-select: none
 </style>

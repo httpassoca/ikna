@@ -2,7 +2,7 @@
   import DeckSearch from "$lib/DeckSearch.svelte";
   import DeckList from "$lib/base/DeckList.svelte";
   import PageTitle from "$lib/base/PageTitle.svelte";
-  import { decks } from "../stores/decks";
+  import { decks } from "../lib/stores/decks";
 
   let search = "";
   let filteredDecks;
