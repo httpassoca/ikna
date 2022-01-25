@@ -1,7 +1,6 @@
 <script lang="ts">
   import { createEventDispatcher } from "svelte";
-  import FaTrash from "svelte-icons/fa/FaTrash.svelte";
-  import FaPencil from "svelte-icons/fa/FaPencilAlt.svelte";
+  import { Trash, Pencil, Icon } from "svelte-hero-icons";
 
   const dispatch = createEventDispatcher();
   const emitRemove = (id: Number) => dispatch("remove", id);
@@ -17,10 +16,10 @@
       {item.name}
       <div class="buttons">
         <div class="icon" on:click|stopPropagation={() => emitEdit(item.id)}>
-          <FaPencil />
+          <Icon src={Pencil} />
         </div>
         <div class="icon" on:click|stopPropagation={() => emitRemove(item.id)}>
-          <FaTrash />
+          <Icon src={Trash} />
         </div>
       </div>
     </li>
