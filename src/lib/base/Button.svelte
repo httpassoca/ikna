@@ -1,12 +1,9 @@
 <script lang="ts">
   export let link = "";
-  export let goBack = false;
   const click = (e) => {
     e.preventDefault;
     if (link) {
       window.location.href = link;
-    } else if (goBack) {
-      window.history.back();
     }
   };
 </script>
