@@ -1,7 +1,6 @@
 <script lang="ts">
   import Button from "$lib/base/Button.svelte";
-  const click = (e) => {
-    e.preventDefault;
+  const click = () => {
     window.history.back();
   };
 </script>

@@ -1,14 +1,13 @@
 <script lang="ts">
   export let link = "";
   const click = (e) => {
-    e.preventDefault;
     if (link) {
       window.location.href = link;
     }
   };
 </script>
 
-<button on:click={click}> <slot /> </button>
+<button on:click|preventDefault={click}> <slot /> </button>
 
 <style lang="sass">
 button
