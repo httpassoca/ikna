@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Button from "$lib/base/Button.svelte";
+  import Button from "$lib/components/base/Button.svelte";
   const click = () => {
     window.history.back();
   };
